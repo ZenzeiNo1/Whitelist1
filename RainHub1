@@ -2,6 +2,7 @@ local HttpService = game:GetService("HttpService")
 local StarterGui = game:GetService("StarterGui")
 local LuaName = "Rain Hub"
 local hwid = tostring(game:GetService("RbxAnalyticsService"):GetClientId())
+local License = _G.Key
 
 StarterGui:SetCore("SendNotification", {
 	Title = LuaName,
@@ -55,7 +56,7 @@ else
 end
 
 print("\n\n Licensing... \n")
-local req = game:HttpGet('https://keyauth.win/api/1.1/?name=' .. Name .. '&ownerid=' .. Ownerid .. '&type=license&key=' .. "KEYAUTH-"..License ..'&ver=' .. APPVersion .. '&sessionid=' .. sessionid)
+local req = game:HttpGet('https://keyauth.win/api/1.1/?name=' .. Name .. '&ownerid=' .. Ownerid .. '&type=license&key=' .. "KEYAUTH-" .. License ..'&ver=' .. APPVersion .. '&sessionid=' .. sessionid)
 local data = HttpService:JSONDecode(req)
 
 
