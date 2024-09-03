@@ -1,6 +1,7 @@
 local HttpService = game:GetService("HttpService")
 local StarterGui = game:GetService("StarterGui")
 local LuaName = "Rain Hub"
+local hwid = tostring(game:GetService("RbxAnalyticsService"):GetClientId())
 
 StarterGui:SetCore("SendNotification", {
 	Title = LuaName,
@@ -9,8 +10,8 @@ StarterGui:SetCore("SendNotification", {
 })
 
 --* Configuration *--
-local initialized = false
-local sessionid = ""
+local initialized = true
+local sessionid = hwid
 
 
 --* Application Details *--
